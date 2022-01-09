@@ -1,21 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300&display=swap');
 
+:root {
+    --main-bg-color: #fcc63f;
+    --white: #fff;
+    --main-font: 'Noto Sans Display', sans-serif;
+  }
+
 body {
     margin: 0;
-    background-color: #fff;
-    font-family: 'Noto Sans Display', sans-serif;
+    background-color: var(--white);
+    font-family: var(--main-font);
 }
 
 .header {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    background-color: #fcc63f;
+    background-color: var(--main-bg-color);
 }
 
 .logo {
-    background-color: white;
+    background-color: var(--white);
     height: 150px;
     flex: 25%;
 }
@@ -48,9 +54,10 @@ a {
     text-decoration: none;
 }
 
-.concept {
+.main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 @media (max-width: 800px) {
     .logo, .navbar {
