@@ -1,2 +1,3 @@
-# mbw-it-landing
+# MBW IT - landing page
+
 Landing page for MBW-IT
