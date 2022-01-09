@@ -48,6 +48,10 @@ a {
     text-decoration: none;
 }
 
+.concept {
+    display: flex;
+    justify-content: center;
+}
 @media (max-width: 800px) {
     .logo, .navbar {
       flex: 100%;
