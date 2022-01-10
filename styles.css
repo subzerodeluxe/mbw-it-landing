@@ -1,23 +1,46 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300&display=swap');
 
+:root {
+    --main-font: 'Noto Sans Display', sans-serif;
+    --main-font-color-headings: #f7ecd1; 
+    --main-font-color: #908a76;
+    --main-bg-color: #070831;
+    --white: #fff;
+
+  }
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     margin: 0;
-    background-color: #fff;
-    font-family: 'Noto Sans Display', sans-serif;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+    color: var(--main-font-color);
 }
 
-.header {
+h2, a {
+    color: var(--main-font-color-headings);
+}
+
+header, main, footer {
+    flex-shrink: 0;
+}
+
+article {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+header {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    background-color: #fcc63f;
-}
-
-.logo {
-    background-color: white;
-    height: 150px;
-    flex: 25%;
+    width: 100%; 
 }
 
 img {
@@ -33,7 +56,7 @@ img {
     align-items: center;
 }
 
-ul {
+.navbar ul {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -43,15 +66,38 @@ ul {
 }
 
 a {
-    color: #212b5c;
     font-weight: bold;
     text-decoration: none;
 }
 
-.concept {
+main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
 }
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid var(--white);
+    width: 50%;
+}
+
+.icon {
+    font-size: 3rem;
+    color: var(--main-font-color-head);
+    margin-bottom: 15px;
+}  
+            
+
+
 @media (max-width: 800px) {
     .logo, .navbar {
       flex: 100%;
